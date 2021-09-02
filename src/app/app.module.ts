@@ -7,6 +7,9 @@ import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './users/user/user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth.guard';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -16,13 +19,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     UserComponent,
     PageNotFoundComponent,
+    BlogComponent,
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
