@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   create_user(){
-    this.route.navigate(["user"])
+    this.route.navigate(["users"])
   }
 
 }

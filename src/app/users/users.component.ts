@@ -3,10 +3,21 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.css']
 })
-export class UserComponent implements OnInit {
+export class UsersComponent implements OnInit {
+
+  users = [
+    {
+    id:1,
+    name:'max'
+  },
+  {
+    id:2,
+    name:'manu'
+  }
+]
 
   constructor(private router:Router,
               private route:ActivatedRoute) { }
@@ -15,7 +26,7 @@ export class UserComponent implements OnInit {
   }
 
   onReload(){
-    this.router.navigate(['user'])
+    this.router.navigate(['users'])
 
   }
 
