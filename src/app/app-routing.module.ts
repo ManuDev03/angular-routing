@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { UserComponent } from './users/user/user.component';
 import { UsersComponent } from './users/users.component';
@@ -10,6 +11,9 @@ const routes: Routes = [
   {path:'users', component:UsersComponent,children:[
     {path:':id/:name', component:UserComponent}
   ]},
+  {path:'not-found', component:PageNotFoundComponent},
+  {path:'**', redirectTo: '/not-found'}
+
 
  
 

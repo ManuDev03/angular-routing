@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './users/user/user.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { UserComponent } from './users/user/user.component';
     UsersComponent,
     HomeComponent,
     UserComponent,
+    PageNotFoundComponent,
   
   ],
   imports: [
